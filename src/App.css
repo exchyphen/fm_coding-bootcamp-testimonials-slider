@@ -115,3 +115,78 @@ p {
   font-size: 0.5rem;
 }
 
+@media screen and (max-width: 1250px) {
+  .main {
+    width: 100%;
+    height: 1100px;
+    max-width: 800px;
+
+    justify-content: center;
+    align-items: flex-end;
+  }
+
+  .testimonial {
+    text-align: center;
+    background-position: top center;
+    padding: 0;
+    margin-bottom: 2rem;
+  }
+  
+  .testimonial__person-container {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .hero {
+    height: auto;
+    padding: 2rem;
+
+    background-size: contain;
+
+    top: 1rem;
+    right: auto;
+    left: 50%;
+    transform: translateY(0) translateX(-50%);
+  }
+
+  .hero__img {
+    width: 400px;
+  }
+
+  .slider {
+    bottom: 1.3rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .main {
+    height: 700px;
+    padding: 0;
+
+    background-size: auto 10%;
+  }
+
+  .testimonial {
+    width: 100%;
+    max-width: 400px;
+    padding: 1rem;
+
+    background-size: auto 80px;
+    margin-bottom: 60px;
+  }
+
+  .hero__img {
+    width: 250px;
+  }
+
+  .slider {
+    width: 90px;
+    height: 40px;
+  }
+
+  .attribution {
+    font-size: 0.8rem;
+  }
+}

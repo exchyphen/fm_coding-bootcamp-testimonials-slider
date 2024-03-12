@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./App.css";
 
 /* images */
@@ -30,7 +30,7 @@ function App() {
   const handleClick = (inc) => {
     // increment
     if (inc > 0) {
-      if (currSlide + 1 === data.length) {
+      if (currSlide + 1 >= data.length) {
         setCurrSlide(0);
       } else {
         setCurrSlide(currSlide + 1);
@@ -45,6 +45,24 @@ function App() {
       }
     }
   };
+
+  const handleArrows = (e) => {
+    console.log("key pressed", e.keyCode);
+
+    if (e.keyCode === 37) {
+      console.log("left");
+      handleClick(-1);
+    } else if (e.keyCode === 39) {
+      console.log("right");
+      handleClick(1);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("keydown", handleArrows);
+
+    return () => window.removeEventListener("keydown", handleArrows);
+  }, []);
 
   return (
     <>

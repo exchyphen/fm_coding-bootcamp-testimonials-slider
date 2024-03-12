@@ -36,3 +36,9 @@ body {
   align-items: center;
   gap: 50px;
 }
+
+@media screen and (max-width: 800px) {
+  html {
+    font-size: 20px;
+  }
+}
