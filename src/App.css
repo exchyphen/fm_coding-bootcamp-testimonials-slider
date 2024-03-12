@@ -1,0 +1,117 @@
+p {
+  color: var(--dark-blue);
+}
+
+.main {
+  width: 80%;
+  max-width: 1250px;
+  height: 800px;
+  padding: 1rem;
+
+  background-image: url("./assets/images/pattern-curve.svg");
+  background-repeat: no-repeat;
+  background-position: bottom left;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  position: relative;
+}
+
+.testimonial {
+  width: 60%;
+  max-width: 900px;
+  padding: 2rem 0;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  background-image: url("./assets/images/pattern-quotes.svg");
+  background-repeat: no-repeat;
+  background-position: top left 2rem;
+
+  z-index: 1;
+}
+
+.testimonial__person-container {
+  display: flex;
+  gap: 0.5rem;
+}
+.testimonial__name, .testimonial__title {
+  font-size: 0.7rem;
+}
+
+.testimonial__name {
+  font-weight: 700;
+}
+
+.testimonial__title {
+  font-weight: 500;
+  color: var(--grayish-blue);
+}
+
+
+.hero {
+  height: 100%;
+  padding: 0 2rem;
+
+  background-image: url("./assets/images/pattern-bg.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;;
+  
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+
+.hero__img {
+  width: 500px;
+  height: auto;
+  border-radius: 10px;
+
+  box-shadow: -100px 130px 20px -120px hsla(246, 55%, 53%, 0.3);
+}
+
+.slider {
+  width: 110px;
+  height: 50px;
+  border-radius: 100px;
+  background: white;
+
+  box-shadow: 0 10px 20px 0px hsla(246, 55%, 53%, 0.3);
+
+  display: flex;
+  align-items: center;
+
+  position: absolute;
+  left: 120px;
+  bottom: 125px;
+
+  overflow: hidden;
+}
+
+.slider__wrapper {
+  width: 50%;
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider__wrapper:hover {
+  cursor: pointer;
+  background: hsla(246, 55%, 53%, 0.3);
+}
+
+.attribution {
+  font-size: 0.5rem;
+}
+
