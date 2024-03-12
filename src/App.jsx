@@ -9,6 +9,7 @@ import Next from "./assets/images/icon-next.svg";
 
 function App() {
   const [currSlide, setCurrSlide] = useState(0);
+  const [activeKey, setActiveKey] = useState(0);
 
   const data = [
     {
@@ -47,16 +48,25 @@ function App() {
   };
 
   const handleArrows = (e) => {
-    console.log("key pressed", e.keyCode);
+    e.preventDefault();
 
     if (e.keyCode === 37) {
-      console.log("left");
-      handleClick(-1);
+      setActiveKey(-1);
     } else if (e.keyCode === 39) {
-      console.log("right");
-      handleClick(1);
+      setActiveKey(1);
     }
+
+    // setTimeout(() => {
+    //   setActiveKey(0);
+    // }, 600);
   };
+
+  useEffect(() => {
+    if (activeKey !== 0) {
+      handleClick(activeKey);
+      setActiveKey(0);
+    }
+  }, [activeKey, handleClick]);
 
   useEffect(() => {
     window.addEventListener("keydown", handleArrows);
