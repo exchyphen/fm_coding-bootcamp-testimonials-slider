@@ -48,6 +48,7 @@ Positioning elements, making sure the correct data is being displayed depending 
 ### Continued development
 
 Restructuring, mainly the hero image container to easily place the navigation buttons.
+Small issue: handling of arrow keys is currently preventing shortcut (F12) to browser console.
 
 ## Author
 
